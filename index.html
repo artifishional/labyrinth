@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <style>
+
+
+        body {
+            font-family: Consolas;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            color: #0026ff
+        }
+
+        @-webkit-keyframes player_move {
+            from {background-position-x: -1px}
+            to {background-position-x: -35px}
+        }
+
+        @-webkit-keyframes crip_move {
+            from {background-position-x: -129px}
+            to {background-position-x: -163px}
+        }
+
+        .move {
+            animation-timing-function: steps(2);
+            animation-iteration-count: infinite;
+        }
+
+        .field div {
+            width: 16px;
+            height: 16px;
+            float: left;
+        }
+
+        .unit {
+            background-image: url("project/sprite.png");
+            position: absolute;
+            z-index: 1;
+            transition-property: margin;
+        }
+
+
+        .player {
+            background-position-x: -1px;
+            animation-name: player_move;
+        }
+
+
+        .crip {
+            background-position-x: -129px;
+            animation-name: crip_move;
+        }
+
+
+        .girl {
+            background-position-y: -71px;
+            background-position-x: -1px;
+        }
+
+        .field {
+            transform: scale(2.5, 2.5) translateX(250px);
+        }
+
+        .wall {
+            background-image: url("project/sprite.png");
+            background-position: -1px -108px;
+        }
+
+
+    </style>
+
+    <meta charset="UTF-8">
+
+    <script src = "extensions/extensions.js"></script>
+    <script src = "extensions/event.js"></script>
+    <script src = "extensions/model.js"></script>
+    <script src = "extensions/structure.js"></script>
+    <script src = "extensions/view.js"></script>
+
+    <script src = "project/main.js"></script>
+    <script src = "project/field.js"></script>
+    <script src = "project/unit.js"></script>
+    <script src = "project/bot.js"></script>
+    <script src = "project/girl.js"></script>
+    <script src = "project/player.js"></script>
+    <script src = "project/bot.js"></script>
+
+    <script src = "project/field_view.js"></script>
+    <script src = "project/main_view.js"></script>
+    <script src = "project/unit_view.js"></script>
+    <script src = "project/moving_view.js"></script>
+    <script src = "project/girl_view.js"></script>
+    <script src = "project/crip_view.js"></script>
+    <script src = "project/player_view.js"></script>
+
+    <script src = "project/unit_controller.js"></script>
+
+    <script src = "project/index.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+    SCORE:<span class = "score">0</span>
+    LEVEL:<span class = "level">1</span>
+    GIRLS:<span class = "girls">7</span>
+    <!--<div class = "example"></div>-->
+    <div class = "field"></div>
+</body>
+</html>
